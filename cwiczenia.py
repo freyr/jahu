@@ -1,5 +1,11 @@
 import random
+import topka
+
 print('siema graczu będziesz mial test z matmy')
+
+#top = topka.odczytaj()
+top = {}
+
 
 print ('jak sie nazywasz?')
 imie =input()
@@ -28,8 +34,14 @@ while True:
         bankpunktow = bankpunktow - 1
         print ('ups cos ci nie wyszło, ci sie uda:)')
     
-    if numer > 10:
+    if numer > 9:
         break
 
 print ("Hej %s! Twoj wynik to %s" % (imie, bankpunktow))
+
+top[imie] = top[imie] + bankpunktow
+
+topka.zapisz(top)
+print(top)
 input()
+
